@@ -3,8 +3,8 @@ import setuptools
 
 import pywalfox.config
 
-LONG_DESC=open('README.md').read()
-VERSION=pywalfox.config.DAEMON_VERSION
+LONG_DESC = open("README.md").read()
+VERSION = pywalfox.config.DAEMON_VERSION
 DOWNLOAD = "https://github.com/Frewacom/pywalfox-native/archive/v%s.tar.gz" % VERSION
 
 setuptools.setup(
@@ -31,5 +31,7 @@ setuptools.setup(
     packages=["pywalfox"],
     entry_points={"console_scripts": ["pywalfox=pywalfox.__main__:main"]},
     python_requires=">=2.7",
+    install_requires=["watchdog"],
     include_package_data=True,
-    zip_safe=False)
+    zip_safe=False,
+)
